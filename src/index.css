@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-rmadrid-dark: #0B1528;
+  --color-rmadrid-navy: #0F2147;
+  --color-rmadrid-gold: #C19A6B;
+  --color-rmadrid-accent: #FEBE10;
+  --color-rmadrid-white: #FFFFFF;
+  --color-rmadrid-light: #F5F7FA;
+  
+  --font-sans: 'Inter', 'Outfit', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-rmadrid-light text-slate-800 font-sans antialiased min-h-screen selection:bg-rmadrid-accent selection:text-rmadrid-navy;
+  }
+}
+
+/* Custom design styles */
+.glass-header {
+  background: rgba(11, 21, 40, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 3px solid rgba(193, 154, 107, 0.4);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FEBE10 0%, #C19A6B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gold-border-glow:hover {
+  border-color: rgba(254, 190, 16, 0.7);
+  box-shadow: 0 10px 25px -5px rgba(254, 190, 16, 0.15), 0 8px 10px -6px rgba(254, 190, 16, 0.15);
+}
